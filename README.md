@@ -32,7 +32,7 @@ Here's how to get the PWA up and running:
 
 5. Make App Installable: Next, we can allow users to install our PWA on devices. We implemented a Web App Manifest file, which defines metadata such as the app name, icons, and theme. In this app there is an "Install" button which enables users to install the PWA on their device once clicked.
 
-![Installed PWA](Installed-PWA.png)
+![Installed PWA](Installed-TextEditor.png)
 
 6. Deploying PWA: Once satisfied with the testing and debugging phase, I deployed my PWA to Heroku (linked at top of description in repo).
 
