@@ -2,13 +2,11 @@
 
 ## Description
 
-Deployed Heroku Application [here](https://serene-sierra-16900.herokuapp.com/) 
+Deployed Heroku Application [here](https://serene-sierra-16900.herokuapp.com/)
 
-Repository Link [here]
-(https://github.com/princessjenn/readme-generator2.git)
+Repository Link [here](https://github.com/princessjenn/Just-Another-Text-Editor.git)
 
-This application helps a user to generate their own professional, quality README file in the command line interface based upon prompts given for each section of the README. The user will be prompted with questions to input in the command-line and once the program ends, they will have a README built based upon their input answers!
-
+This Progressive Web Application is built using the web technologies such as HTML, CSS, and JavaScript, making it compatible with multiple platforms and operating systems. It can run on various browsers, including Chrome, Firefox, Safari, and Edge to name a few! 
 
 ## Table of Contents
 
@@ -22,50 +20,34 @@ This application helps a user to generate their own professional, quality README
 
 ## Installation
 
-In order to generate your own README.md file through the command-line, you will need to follow these steps to get your program running in the correct environment:
+Here's how to get the PWA up and running:
 
-- Navigate to your local command line/terminal window, and change directories into the directory where you want to create a new repository.
+1. Starting off with an existing application, this assignment challenged me to implement methods for getting and storing data to an IndexedDB database. We will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data
 
-```cd repos```
+2. Set Up a Service Worker: This will act as a proxy between the web app and the network, allowing us to cache and serve content offline. We'll create a Service Worker JavaScript file and register it into the web app. The Service Worker will handle caching and offline functionality.
 
-- Next, create a new directory called readmeGenerator using the command 
+3. Implement Caching: Within the Service Worker, define which assets (HTML, CSS, JavaScript, images, etc.) should be cached for offline use. In our case, Javascript and CSS files, and we will use library Workbox for the the caching process.
 
-```mkdir readmeGenerator```
+4. Enable Offline Support: Add code to your Service Worker to intercept network requests and serve cached content when the user is offline. This way, your PWA can still function and display content even without an internet connection.
 
-- Once directory is created, you’ll want to change directories into it
+5. Make App Installable: Next, we can allow users to install our PWA on devices. We implemented a Web App Manifest file, which defines metadata such as the app name, icons, and theme. In this app there is an "Install" button which enables users to install the PWA on their device once clicked.
 
-```cd readmeGenerator```
+![Installed PWA](Installed-PWA.png)
 
-- Open directory into Visual Studio code by entering into the command line:
+6. Deploying PWA: Once satisfied with the testing and debugging phase, I deployed my PWA to Heroku (linked at top of description in repo).
 
-```code .```
-
-- Once VS code has opened with the 'readmeGenerator' directory, open the integrated terminal associated with it, and in the command line type ```npm init -y``` ,which is used to initialize a new Node.js project with default settings.
- 
-- When you run ```npm init -y```, NPM creates a new package.json file in your current directory with default settings, including the project name, version number, description, entry point file, test command, and other metadata.
-
-- Next, create a '.gitignore' file in the directory in order to store the ‘node_modules’ directory into. The purpose of ‘ignoring’ the node_modules is to reduce the repository size, because if you include it in your Git repository it can increase the repository's size significantly. This can make it slow to clone, push, or pull the repository.
-
-- Once we’ve initialized the Node.js, we will install Inquirer with the command ```npm install inquirer@8.2.4```. Inquirer is a powerful and easy-to-use Node.js library for creating interactive command-line interfaces (CLIs)
-
-- When the installation process is complete, we can implement Inquirer into our README generator project by ‘importing’ it at the top of our Javascript file (which reads the code TOP to BOTTOM), ‘import inquirer from 'inquirer’;’
-
-- Lastly, we will create a 'index.mjs' file into the integrated terminal with the command ```touch index.mjs```. In Node.js, when you import a directory that doesn't have an 'index.js' file, Node.js looks for an 'index.mjs' file by default. The 'index.mjs' file imports two modules from other files in the same directory, and then exports them as an object with named properties. This allows other modules to import all the modules in the directory at once by importing the 'index.mjs' file.
-
-- Once the index.mjs file is created, you will complete the process by running ```node index.mjs``` into the command line. 
-This starts the Node.js runtime, and executes the JavaScript code in the 'index.mjs' file as a module.
-
-Now we're ready to start coding!
 
 ## Usage
 
-Assuming logic is added to the `index.js` to register a service worker, and the `webpack.config.js` file is updated to use the HTML webpack plugin and the Inject Manifest class of the workbox webpack plugin. To run and use the application through your viewport, my case being `localhost:8081`, you would follow these steps:
+Assuming logic is added to the `index.js` to register a service worker, and the `webpack.config.js` file is updated to use the HTML webpack plugin, AND the `Inject Manifest` class of the workbox webpack plugin, we can run and use the application through the viewport offline at `localhost:8080`
 
 1. In VS Code, open the integrated terminal associated with the root of the directory
-2. Assuming you have the programs and dependencies described above from the 'Installation' section, simply type `npm run start:dev` into CLI to start running the generator.
-3. You will be presented with a console message in the terminal that the app is listening, and directs you to go to the viewport in your browser, `localhost:8081`
-4. Once the program ends and the user has entered all of their inputs on the command line based upon the given prompts, the README.md file will be generated in your explorer on VS Code!
 
+2. Assuming you have the programs and dependencies installed with `npm install`, simply type `npm run start:dev` into root directory terminal.
+
+3. You will be presented with a console message in the terminal that the app is listening, and directs you to go to the viewport in your browser, `localhost:8080`
+
+WITH online access, the deployed Heroku app can be viewed in your browser [here](https://serene-sierra-16900.herokuapp.com/)
 
 ## License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
